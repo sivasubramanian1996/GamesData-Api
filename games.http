@@ -1,0 +1,57 @@
+POST http://localhost:4000/register/
+Content-Type: application/json
+
+{   
+    "phoneNumber":"7010504398",
+    "password":"sivas",
+    "name":"siva",
+    "age":"25",
+    "location":"andhra",
+    "emaiId":"venkat.r@gmail.com"
+}
+########
+
+POST http://localhost:4000/login/
+Content-Type: application/json
+
+{
+  "phoneNumber":8122786215,
+  "password":"developer"
+}
+
+#########
+PUT  http://localhost:4000/users/update/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6ODEyMjc4NjIxNSwiaWF0IjoxNjIyMzc0Nzk1fQ.cRMTDCurVSL8dt3gU4dJUtqUfEM0lA_8uRRjnyU7FyM
+Content-Type: application/json
+
+{
+  "location": "tirunelveli"
+}
+#########
+
+GET  http://localhost:4000/users/games/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6ODEyMjc4NjIxNSwiaWF0IjoxNjIyMzc0Nzk1fQ.cRMTDCurVSL8dt3gU4dJUtqUfEM0lA_8uRRjnyU7FyM
+
+######
+
+POST http://localhost:4000/users/updateScores/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6ODEyMjc4NjIxNSwiaWF0IjoxNjIyMzc0Nzk1fQ.cRMTDCurVSL8dt3gU4dJUtqUfEM0lA_8uRRjnyU7FyM
+Content-Type: application/json
+
+{
+    "u1Id":1,
+    "u2Id":2,
+    "scoreU1":45,
+    "scoreU2":40,
+    "win":"true",
+    "game_id":1
+}
+
+#####
+
+GET http://localhost:4000/users/games/1/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6ODEyMjc4NjIxNSwiaWF0IjoxNjIyMzc0Nzk1fQ.cRMTDCurVSL8dt3gU4dJUtqUfEM0lA_8uRRjnyU7FyM
+
+######
